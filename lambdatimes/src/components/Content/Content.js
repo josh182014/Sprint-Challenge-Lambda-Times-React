@@ -50,7 +50,7 @@ export default class Content extends Component {
     else {
       let filteredTabs = this.state.cards.filter(each => {
         console.log('EACH', each.cards)
-        if (each.tab.includes(this.state.selected)) {
+        if (each.tab.toLowerCase().includes(this.state.selected)) {
           console.log('match!')
           return each;
         }

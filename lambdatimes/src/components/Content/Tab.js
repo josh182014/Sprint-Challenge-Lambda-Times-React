@@ -7,13 +7,13 @@ const Tab = props => {
       if it is not it should just be 'tab'*/
 
   let createClassName = () => {
-    if (props.selectedTab === props.tab) {
-      console.log('lkajsdfkljasdf', props.selectedTab)
+    if (props.selectedTab.toLowerCase() === props.tab.toLowerCase()) {
+      console.log('lkajsdfkljasdf', props.selectedTab, props.tab)
       return 'tab active-tab'
     }
     else return 'tab'
   }
-  
+
   return (
     <div
       className={createClassName()}
