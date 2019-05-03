@@ -25,7 +25,6 @@ export default class Content extends Component {
   }
 
   changeSelected = tab => {
-    console.log('changeSelected', tab)
     // this function should take in the tab and update the state with the new tab.
     this.setState({ selected: tab.target.textContent.toLowerCase() })
   };
@@ -58,12 +57,9 @@ export default class Content extends Component {
       })
       return filteredTabs
     }
-
-    // return this.state.cards;
   };
 
   render() {
-    console.log('insideContent.js, this.state', this.state)
     return (
       <div className="content-container">
         {/* 
